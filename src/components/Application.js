@@ -1,5 +1,5 @@
 import React from "react";
-import React, { useState } from "react";
+import { useState } from "react";
 import "components/Application.scss";
 import DayList from "./DayList";
 
@@ -30,7 +30,7 @@ export default function Application(props) {
           <img className="sidebar--centered" src="images/logo.png" alt="Interview Scheduler" />
           <hr className="sidebar__separator sidebar--centered" />
           <nav className="sidebar__menu">
-            <DayList days={days} day={day} setDay={setDay} />
+            <DayList days={days} value={day} onChange={setDay} />
           </nav>
           <img className="sidebar__lhl sidebar--centered" src="images/lhl.png" alt="Lighthouse Labs" />
           </>
