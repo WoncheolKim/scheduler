@@ -4,6 +4,7 @@ import Show from "./Show";
 import Empty from "./Empty";
 import "components/Appointment/styles.scss"
 import useVisualMode from "hooks/useVisualMode";
+import Form from "./Form";
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
@@ -24,6 +25,7 @@ export default function Appointment(props) {
           interviewer={props.interview.interviewer}
         />
       )}
+      {mode === CREATE && <Form interviewers={[]} />}
 
       {/* {props.interview ? 
       <Show 
