@@ -43,7 +43,7 @@ export default function Application(props) {
       ...state.appointments,
       [id]: appointment,
     };
-    
+
     return axios.delete(`/api/appointments/${id}`).then(() => {
       setState({ ...state, appointments });
     });
@@ -70,12 +70,8 @@ export default function Application(props) {
   });
 
   const setDay = (day) => setState({ ...state, day });
-  // const setDays = days => setState(prev => ({...prev, days}))
 
   useEffect(() => {
-    // axios.get("/api/days").then((response) => {
-    //   setDays(response.data);
-    // setDays(response.data)
     Promise.all([
       axios.get("/api/days"),
       axios.get("/api/appointments"),
