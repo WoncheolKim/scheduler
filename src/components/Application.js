@@ -10,8 +10,8 @@ import {
 } from "helpers/selectors";
 
 export default function Application(props) {
-  const [state, setState, bookInterview, cancelInterview ] = useApplicationData();
-
+  const { state, setDay, bookInterview, cancelInterview } = useApplicationData();
+  
   const dailyAppointments = getAppointmentsForDay(state, state.day);
 
   const schedule = dailyAppointments.map(appointment => {
