@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function useApplicationData() {
+  // -- state object
   
   const [state, setState] = useState({
     day: "Monday",
@@ -35,10 +36,10 @@ export default function useApplicationData() {
     return emptyApp;
   };
 
+  // -- makes HTTP request; updating the state object starting at lowest level
   function bookInterview(id, interview) {
     console.log(id, interview);
     console.log("after the fire", state);
- 
     console.log('before the fire', state)
     return axios.put(`/api/appointments/${id}`, {interview}).then(() => {
       console.log('during the fire', state)
@@ -66,6 +67,7 @@ export default function useApplicationData() {
     });
   }
 
+  // -- makes HTTP request; updates local state
   function cancelInterview(id) {
     const appointment = {
       ...state.appointments[id],
@@ -93,7 +95,9 @@ export default function useApplicationData() {
     });
   }
 
+  // -- used to set the current day
   const setDay = (day) => setState({ ...state, day });
+  // -- effect method
   
   return {
     state,
