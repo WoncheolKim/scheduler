@@ -26,11 +26,19 @@ Install dependencies with `npm install`.
 
 ## Final Product
 
-### Main page
+### Main
 !["Main page"](https://github.com/WoncheolKim/scheduler/blob/master/docs/Mainpage.png?raw=true)
+
+### Book
 !["Full booked"](https://github.com/WoncheolKim/scheduler/blob/master/docs/Mainpage_Full.png?raw=true)
+
+### New Interview
 !["New Interview"](https://github.com/WoncheolKim/scheduler/blob/master/docs/Newinterview.png?raw=true)
+
+### Save
 !["Save"](https://github.com/WoncheolKim/scheduler/blob/master/docs/Save.png?raw=true)
+
+### Delete
 !["Delete"](https://github.com/WoncheolKim/scheduler/blob/master/docs/Delete.png?raw=true)
 
 
