@@ -17,16 +17,19 @@ export default function Form(props) {
     reset();
     props.onCancel();
   };
-  // ========
+
   function validate() {
     if (student === "") {
       setError("Student name cannot be blank");
       return;
     }
+    if (!interviewer){
+      setError("No Interviewer selected")
+      return;
+    }
     setError("");
     props.onSave(student, interviewer);
   }
-  // =======
 
   return (
     <main className="appointment__card appointment__card--create">

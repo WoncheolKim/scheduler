@@ -25,7 +25,7 @@ export default function Appointment(props) {
   );
 
   function save(name, interviewer) {
-    if(!name || !interviewer) {
+    if (!name || !interviewer) {
       return;
     }
     transition(SAVING);
@@ -54,8 +54,9 @@ export default function Appointment(props) {
   }
 
   return (
-    <article className="appointment" data-testid="appointment">
+    <article className="appointment">
       <Header time={props.time} />
+
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SHOW && (
         <Show
